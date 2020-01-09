@@ -19,7 +19,7 @@ p {
 }
 
 a {
-  color: #cbc6c3;
+  color: #c42034;
 }
 
 .sep{
@@ -27,7 +27,7 @@ a {
 }
 
 h3, p, a, .sep {
-  margin: 5px 10px;
+  margin: 0 8px;
 }
 
 .a-for-anchor-in{

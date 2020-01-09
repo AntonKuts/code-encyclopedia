@@ -1,10 +1,11 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import './Content.css';
 
 const Content = () => {
-  let info = [
+  const startInfo = [
     {
+      id: 1,
       title: 'length',
       titleUa: 'Довжина масиву або рядка',
       similarTopics: ['arr', 'forIn'],
@@ -27,10 +28,11 @@ const Content = () => {
       mandatoryAttributes: null
     },
     {
+      id: 2,
       title: 'for',
       titleUa: 'Цикл, перебір масиву чи рядка',
       similarTopics: ['arr', 'length'],
-      like: false,
+      like: true,
       category: 'js',
       descriptionEng: 'Loop array or string',
       descriptionUa: 'Цикл, перебір масиву чи рядка',
@@ -49,17 +51,34 @@ const Content = () => {
       mandatoryAttributes: '(;;)'
     }
   ];
+  const [info, setInfo] = useState(startInfo);
+  const setLike = item => {
+    item.like = !item.like;
+    const newInfo = [...info];
+    newInfo.splice(item.id-1, 1, item);
+    setInfo(newInfo);
+  }
+  console.log('________info_________');
   console.log(info);
   return (
     <div className="content">
       {info.map(item =>
       <div className="main-box" key={item.title}>
         <div className="title-box">
-          <a name={item.title} className="a-for-anchor-in" ><h3>{item.title}</h3></a>
+          <a name={item.title} className="a-for-anchor-in" >
+            <h3>{item.title}</h3>
+          </a>
+          <p className= {`like ${item.like ? 'yesLike' : 'noLike'}`} onClick={() => setLike(item)}>like</p>
           <span className="sep">|</span>
-          <p>{item.titleUa}</p> <span className="sep">|</span>
+          <p>{item.titleUa}</p>
+          <span className="sep">|</span>
+          <div className="tooltip-category">
+            <span className="tooltip-text-category">category</span>
+            <p>{item.category}</p>
+          </div>
+          <span className="sep">|</span>
           <div className="tooltip-similar-topics">
-            <span class="tooltip-text-similar-topics">similar topics</span>
+            <span className="tooltip-text-similar-topics">similar topics</span>
             {item.similarTopics.map(item => <a key={item} href={`#${item}`}>{item}</a> )}
           </div>
         </div>
