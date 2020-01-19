@@ -1,13 +1,13 @@
 .Content {
   display: flex;
-  flex-direction: c;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .main-box{
-  padding: 2px 8px;
+  padding: 4px 8px;
   background-color: #f7f8f9;
   border-bottom: 1px solid #acbdd3;
 }
@@ -16,7 +16,7 @@
   border-bottom: none;
 }
 
-.title-box{
+.title-box, .discription-box{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -24,88 +24,69 @@
   flex-wrap: wrap;
 }
 
-.tooltip-similar-topics {
+.tooltip{
   position: relative;
   display: inline-block;
 }
 
-.tooltip-similar-topics .tooltip-text-similar-topics {
+.tooltip .tooltip-text {
   visibility: hidden;
   background-color: #f7f8f9;
   width: 100px;
   text-align: center;
   position: absolute;
   z-index: 10;
-  bottom: 120%;
+  top: 145%;
   left: 50%;
   margin-left: -60px;
   padding: 3px;
   opacity: 0;
   transition: opacity 0.3s;
+  border: 2px solid #5d80b6;
 }
 
-.tooltip-similar-topics .tooltip-text-similar-topics::after {
+.tooltip .tooltip-text::after {
   content: "";
   position: absolute;
-  top: 100%;
+  bottom: 104%;
   left: 50%;
   margin-left: -5px;
-  border-width: 5px;
+  border-width: 7px;
   border-style: solid;
-  border-color: #5d80b6 transparent transparent transparent;
+  border-color: transparent transparent #5d80b6 transparent;
 }
 
-.tooltip-similar-topics:hover .tooltip-text-similar-topics {
+.tooltip:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
 }
 
-.tooltip-category {
+.tooltip {
   position: relative;
   display: inline-block;
 }
 
-.tooltip-category .tooltip-text-category {
-  visibility: hidden;
-  background-color: #f7f8f9;
-  width: 100px;
-  text-align: center;
-  position: absolute;
-  z-index: 10;
-  bottom: 120%;
-  left: 50%;
-  margin-left: -60px;
-  padding: 3px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip-category .tooltip-text-category::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #5d80b6 transparent transparent transparent;
-}
-
-.tooltip-category:hover .tooltip-text-category {
-  visibility: visible;
-  opacity: 1;
-}
-
-.like{
+.like {
   font-size: 10px;
   margin: -10px 0 0 -3px;
   cursor: pointer;
 }
 
-.yesLike{
+.yesLike {
   color: #c42034;
 }
 
-.noLike{
+.noLike {
   color: #5d80b6;
+}
+
+pre {
+  margin: 7px;
+  color: #101e5a;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.mandatory-attributes{
+  color: #c42034;
 }
