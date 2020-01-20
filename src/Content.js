@@ -12,8 +12,8 @@ const Content = ({language, setTost}) => {
       similarTopics: ['arr', 'forIn'],
       like: false,
       category: 'js',
-      descriptionEng: 'The length of the array or string. Refreshes on change. For array it can be set, for a line not. If you specify more - fill in the empty elements. If less - irrevocably crop',
-      descriptionUa: 'Довжина масиву або рядки. Обновляеться при зміні. Для масиву може бути заданий, для рядка ні. Якщо вказати більше - заповнитися порожніми елементами. Якщо менше - безповоротно обріже масив.',
+      descriptionEng: 'Refreshes on change. For array it can be set, for a line not. If you specify more - fill in the empty elements. If less - irrevocably crop',
+      descriptionUa: 'Оновляеться при зміні. Для масиву може бути заданий, для рядка ні. Якщо вказати більше - заповнитися порожніми елементами. Якщо менше - безповоротно обріже масив.',
       linkToDocumentationEng: [
         'https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/length'
       ],
@@ -37,8 +37,8 @@ const Content = ({language, setTost}) => {
       similarTopics: ['arr', 'length'],
       like: true,
       category: 'js',
-      descriptionEng: 'Cycle, array, or row search. You can end the iteration by specifying -continue-, or end the loop immediately -break-.',
-      descriptionUa: 'Цикл, перебір масиву чи рядка. Можна припинити ітерацію вказавши -continue-, або одразу припинити цикл -break-.',
+      descriptionEng: 'You can end the iteration by specifying -continue-, or end the loop immediately -break-.',
+      descriptionUa: 'Можна припинити ітерацію вказавши -continue-, або одразу припинити цикл -break-.',
       linkToDocumentationEng: [
         'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for'
       ],
