@@ -23,7 +23,7 @@ const Content = ({language, setTost}) => {
       ],
       author: 'Anton Kuts',
       authorContactLink: 'https://www.linkedin.com/in/anton-kuts/',
-      dateIntroductionOrUpdate: 'https://www.linkedin.com/in/anton-kuts/',
+      dateIntroductionOrUpdate: '08.01.2020',
       code: ['arr.length'],
       display: true,
       mandatoryAttributes: null,
@@ -48,7 +48,7 @@ const Content = ({language, setTost}) => {
       ],
       author: 'Anton Kuts',
       authorContactLink: 'https://www.linkedin.com/in/anton-kuts/',
-      dateIntroductionOrUpdate: 'https://www.linkedin.com/in/anton-kuts/',
+      dateIntroductionOrUpdate: '08.01.2020',
       code:'for (var i = 0; i < arr.length; i++) { \n arr[i];\n}',
       display: true,
       mandatoryAttributes: '(;;)',
@@ -72,7 +72,7 @@ const Content = ({language, setTost}) => {
       ],
       author: 'Anton Kuts',
       authorContactLink: 'https://www.linkedin.com/in/anton-kuts/',
-      dateIntroductionOrUpdate: 'https://www.linkedin.com/in/anton-kuts/',
+      dateIntroductionOrUpdate: '20.01.2020',
       code:'<!DOCTYPE html>',
       display: true,
       mandatoryAttributes: '<!DOCTYPE html>',
@@ -114,7 +114,7 @@ const Content = ({language, setTost}) => {
             <p>{language === 'ua' ? item.introUa : item.intro}</p>
             <span className="sep">|</span>
             <div className="tooltip">
-              <span className="tooltip-text">category</span>
+              <span className="tooltip-text">Category</span>
               <p>{item.category}</p>
             </div>
             {item.similarTopics.length > 0
@@ -174,6 +174,11 @@ const Content = ({language, setTost}) => {
               </>
               : null
             }
+            <span className="sep">|</span>
+            <div className="tooltip">
+              <span className="tooltip-text">Date</span>
+              <p>{item.dateIntroductionOrUpdate || ''}</p>
+            </div>
           </div>
           <pre className="code-box" onClick={()=> updateClipboard(item.title, item.code)}>
             {item.code}
