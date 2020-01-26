@@ -2,17 +2,19 @@
 import React, { useState } from 'react';
 import './Content.css';
 import Tooltip from './Tooltip';
-import { getStartInfo } from './data';
 
-const Content = ({language, setTost}) => {
+const Content = (props) => {
 
-  const [info, setInfo] = useState(getStartInfo());
+  const {
+    info,
+    setInfo,
+    setTost,
+    language,
+  } = props;
 
   const setLike = item => {
     item.like = !item.like;
-    const newInfo = [...info];
-    newInfo.splice(item.id-1, 1, item);
-    setInfo(newInfo);
+    setInfo(info.map(word => word.id === item.id ? item : word));
   };
 
   function updateClipboard(text, code) {

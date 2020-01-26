@@ -124,8 +124,8 @@ const startInfo = [
         similarTopics: ['html'],
         like: true,
         category: 'html',
-        descriptionEng: 'It consists of tags - brackets (<>), which in turn contain text, images, videos and other content',
-        descriptionUa: 'Складається з тегів - елементів сайту, що обгорнуті дужками(<>), які в свою чергу містять текст, малюнки, відео та інший контент',
+        descriptionEng: 'It consists of tags - brackets (<>), which in turn contain text, images, videos and other content.',
+        descriptionUa: 'Складається з тегів - елементів сайту, що обгорнуті дужками(<>), які в свою чергу містять текст, малюнки, відео та інший контент.',
         linkToDocumentationEng: [
             'https://www.w3schools.com/tags/tag_body.asp'
         ],
@@ -138,7 +138,56 @@ const startInfo = [
         display: true,
         mandatoryAttributes: '<body></body>',
         lesson: 1
+    },
+    {
+        id: 7,
+        title: 'p',
+        intro: 'The main tag for the text.',
+        introUa: 'Основний тег для текста.',
+        similarTopics: [],
+        like: true,
+        category: 'html',
+        descriptionEng: 'A block element, so it always starts with a new line.',
+        descriptionUa: 'Блоковий елемент, тому завжди починається з нового рядка.',
+        linkToDocumentationEng: [
+            'https://www.w3schools.com/tags/tag_body.asp'
+        ],
+        linkToDocumentationUA: [
+            'https://www.w3schools.com/tags/tag_p.asp',
+        ],
+        author: 'Anton Kuts',
+        dateIntroductionOrUpdate: '26.01.2020',
+        code:'<p>some text</p>',
+        display: true,
+        mandatoryAttributes: '',
+        lesson: 1
+    },
+    {
+        id: 8,
+        title: 'h1',
+        intro: 'Тег для позначення заголовку.',
+        introUa: 'Title tag.',
+        similarTopics: ['p'],
+        like: true,
+        category: 'html',
+        descriptionEng: 'Tags from h1 to h6 define titles from larger to smaller. Begin with a new term.',
+        descriptionUa: 'Теги від h1 до h6 визначають заголовки від більшого до меньшого. Починаються з новой строки.',
+        linkToDocumentationEng: [
+            'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements'
+        ],
+        linkToDocumentationUA: [
+            'https://css.in.ua/html/tag/h1'
+        ],
+        author: 'Anton Kuts',
+        dateIntroductionOrUpdate: '26.01.2020',
+        code:'<h1>some text</h1>',
+        display: true,
+        mandatoryAttributes: '',
+        lesson: 1
     }
 ];
 
-export const getStartInfo = () => startInfo.filter((item)=> item.display);
+export const getStartInfo = (selectLesson) => startInfo
+  .filter((item)=>
+  (selectLesson ? selectLesson === item.lesson : true)
+  && item.display);
