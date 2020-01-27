@@ -13,12 +13,10 @@ const App = () => {
 
   const setTost = (text) => {
     setStateTost(text);
-    setTimeout(()=>setStateTost(''), 2500);
+    setTimeout(()=>setStateTost(''), 300);
   }
 
-
   const onlyTitles = info.map(word=> word.tatle); //toDo
-  // const lessons = [ ...new Set(info.map(word=> word.lesson))];
 
   return (
     <div className="App">

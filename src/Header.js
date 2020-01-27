@@ -36,10 +36,10 @@ const Header = (props) => {
       <div className="tost" onClick={() => setStateTost('')}>
         {tost}
       </div>
-      <div className="change-language" onClick={() => changeLanguage()}>
+      <div className={`right-panel change-language ${language === 'ua' ? 'select-lesson-box' : ''}`} onClick={() => changeLanguage()}>
         {language === 'ua' ? 'Eng' : 'Ukr'}
       </div>
-      <div className={`change-lessons ${selectLesson === 0 ? '' : 'select-lesson-box'}`}>
+      <div className={`right-panel change-lessons ${selectLesson === 0 ? '' : 'select-lesson-box'}`}>
         <p>lessons:</p>
         {lessons.map((number, item) =>
           <button key={item} className={selectLesson === number ? 'select-lesson' : ''} onClick={() => changeLesson(number)}>

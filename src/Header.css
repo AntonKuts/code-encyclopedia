@@ -1,26 +1,3 @@
-
-.change-language{
-  position: fixed;
-  top: 0;
-  right: -60px;
-  padding: 15px 20px;
-  color: #c42034;
-  text-decoration: underline;
-  cursor: pointer;
-  border: 2px solid #acbdd3;
-  border-left: 10px solid #c42034;
-  color: #c42034;
-  cursor: pointer;
-  text-align: center;
-  font-size: 18px;
-  z-index: 10;
-  background-color: #f7f8f9;
-}
-
-.change-language:hover{
-  right: 0px;
-}
-
 .tost {
   position: fixed;
   top: 0;
@@ -40,25 +17,35 @@
   display: none;
 }
 
-.change-lessons{
+.right-panel{
   position: fixed;
-  top: 60px;
-  right: -122px;
   padding: 15px 20px;
   color: #c42034;
-  cursor: pointer;
   border: 2px solid #acbdd3;
   border-left: 10px solid #acbdd3;
   color: #c42034;
-  cursor: pointer;
   text-align: center;
   font-size: 18px;
   z-index: 10;
   background-color: #f7f8f9;
 }
 
-.change-lessons:hover{
+.right-panel:hover{
   right: 0px;
+}
+
+.change-language{
+  width: 30px;
+  top: 20px;
+  right: -60px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.change-lessons{
+  width: 100px;
+  top: 79px;
+  right: -130px;
 }
 
 .select-lesson-box{

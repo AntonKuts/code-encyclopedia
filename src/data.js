@@ -165,8 +165,8 @@ const startInfo = [
     {
         id: 8,
         title: 'h1',
-        intro: 'Тег для позначення заголовку.',
-        introUa: 'Title tag.',
+        intro: 'Title tag.',
+        introUa: 'Тег для позначення заголовку.',
         similarTopics: ['p'],
         like: true,
         category: 'html',
@@ -184,7 +184,31 @@ const startInfo = [
         display: true,
         mandatoryAttributes: '',
         lesson: 1
+    },
+    {
+        id: 9,
+        title: 'br',
+        intro: 'Inserts an empty line.',
+        introUa: 'Вставляє пусту строку.',
+        similarTopics: '',
+        like: true,
+        category: 'html',
+        descriptionEng: 'Lets you skip a line in text or other content.',
+        descriptionUa: 'Дозволяє робити пропуски строки в тексті чи і іншому контенті.',
+        linkToDocumentationEng: [
+            'https://developer.mozilla.org/uk/docs/Web/HTML/Element/br'
+        ],
+        linkToDocumentationUA: [
+            'https://css.in.ua/html/tag/br'
+        ],
+        author: 'Anton Kuts',
+        dateIntroductionOrUpdate: '27.01.2020',
+        code:'<br/>',
+        display: true,
+        mandatoryAttributes: '',
+        lesson: 1
     }
+
 ];
 
 export const getStartInfo = (selectLesson) => startInfo

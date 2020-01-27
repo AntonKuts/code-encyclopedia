@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './Content.css';
 import Tooltip from './Tooltip';
+import Link from './Link';
 
 const Content = (props) => {
 
@@ -13,6 +14,7 @@ const Content = (props) => {
   } = props;
 
   const setLike = item => {
+    setTost(item.like ? '-1 like!' : '+1 like!');
     item.like = !item.like;
     setInfo(info.map(word => word.id === item.id ? item : word));
   };
@@ -30,9 +32,7 @@ const Content = (props) => {
             { item.title
               ?
               <>
-                <a name={item.title} className="a-for-anchor-in" >
-                  <h3>{item.title}</h3>
-                </a>
+                <Link name={item.title} className="a-for-anchor-in" key={item + index} href={`#${item}`} text={<h3>{item.title}</h3>} />
                 <p className= {`like ${item.like ? 'yesLike' : 'noLike'}`} onClick={() => setLike(item)}>
                   like
                 </p>
@@ -55,7 +55,8 @@ const Content = (props) => {
               display={item.similarTopics && item.similarTopics.length > 0}
               tooltipText={'Similar topics'}
               children={item.similarTopics && item.similarTopics.map((item, index) =>
-                <a key={item + index} href={`#${item}`}>{item}</a> )}
+                <Link key={item + index} href={`#${item}`} text={item} />
+              )}
             />
             <Tooltip
               display={item.mandatoryAttributes}
@@ -66,19 +67,15 @@ const Content = (props) => {
               display={item.linkToDocumentationEng && item.linkToDocumentationEng.length > 0}
               tooltipText={'Links'}
               children={item.linkToDocumentationEng && item.linkToDocumentationEng.map((item, index) =>
-                <a key={item + index} href={item} target="_blank" rel="noopener noreferrer">
-                  Link {index+1}
-                </a> )
-              }
+                <Link key={item + index} href={item} target="_blank" rel="noopener noreferrer" text={`Link ${index+1}`} />
+              )}
             />
             <Tooltip
               display={item.linkToDocumentationUA && item.linkToDocumentationUA.length > 0 && language === 'ua'}
               tooltipText={'Links UA'}
               children={item.linkToDocumentationUA && item.linkToDocumentationUA.map((item, index) =>
-                <a key={item + index} href={item} target="_blank" rel="noopener noreferrer">
-                  Links UA {index+1}
-                </a> )
-              }
+                <Link key={item + index} href={item} target="_blank" rel="noopener noreferrer" text={`Link UA ${index+1}`} />
+              )}
             />
             <Tooltip
               display={item.lesson}
