@@ -13,7 +13,7 @@ const App = () => {
 
   const setTost = (text) => {
     setStateTost(text);
-    setTimeout(()=>setStateTost(''), 300);
+    setTimeout(()=>setStateTost(''), 3000);
   }
 
   const onlyTitles = info.map(word=> word.tatle); //toDo

@@ -19,7 +19,8 @@ const Content = (props) => {
     setInfo(info.map(word => word.id === item.id ? item : word));
   };
 
-  function updateClipboard(text, code) {
+  const updateClipboard = (text, code) => {
+    console.log(text, code);
     navigator.clipboard.writeText(code)
     .then(()=> setTost(`Code '${text}' successfully copy.`), ()=>setTost(`Code '${text}' failed copy!`));
   }
