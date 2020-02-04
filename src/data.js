@@ -144,11 +144,11 @@ const startInfo = [
         title: 'p',
         intro: 'The main tag for the text.',
         introUa: 'Основний тег для текста.',
-        similarTopics: [],
+        similarTopics: ['span'],
         like: true,
         category: 'html',
         descriptionEng: 'A block element, so it always starts with a new line.',
-        descriptionUa: 'Блоковий елемент, тому завжди починається з нового рядка.',
+        descriptionUa: 'Блоковий (block) елемент, тому завжди починається з нового рядка.',
         linkToDocumentationEng: [
             'https://www.w3schools.com/tags/tag_body.asp'
         ],
@@ -167,7 +167,7 @@ const startInfo = [
         title: 'h1',
         intro: 'Title tag.',
         introUa: 'Тег для позначення заголовку.',
-        similarTopics: ['p'],
+        similarTopics: ['p', 'span'],
         like: true,
         category: 'html',
         descriptionEng: 'Tags from h1 to h6 define titles from larger to smaller. Begin with a new term.',
@@ -190,7 +190,7 @@ const startInfo = [
         title: 'br',
         intro: 'Inserts an empty line.',
         introUa: 'Вставляє пусту строку.',
-        similarTopics: '',
+        similarTopics: [],
         like: true,
         category: 'html',
         descriptionEng: 'Lets you skip a line in text or other content.',
@@ -203,10 +203,102 @@ const startInfo = [
         ],
         author: 'Anton Kuts',
         dateIntroductionOrUpdate: '27.01.2020',
-        code:'<br/>',
+        code:'<br>',
         display: true,
         mandatoryAttributes: '',
         lesson: 1
+    },
+    {
+        id: 10,
+        title: 'div',
+        intro: 'The main universal tag for building a site structure.',
+        introUa: 'Основний універсальний тег для побудови структури сайту.',
+        similarTopics: [],
+        like: true,
+        category: 'html',
+        descriptionEng: 'The block element, so it always starts with a new line. Can be nested in one.',
+        descriptionUa: 'Блоковий елемент, тому завжди починається з нового рядка. Може бути вкладений один в одний.',
+        linkToDocumentationEng: [
+            'https://www.geeksforgeeks.org/div-tag-html/'
+        ],
+        linkToDocumentationUA: [
+            'https://css.in.ua/html/tag/div'
+        ],
+        author: 'Anton Kuts',
+        dateIntroductionOrUpdate: '31.01.2020',
+        code:'<div> some code </div>',
+        display: true,
+        mandatoryAttributes: '',
+        lesson: 2
+    },
+    {
+        id: 11,
+        title: 'img',
+        intro: 'A tag for adding pictures to the page.',
+        introUa: 'Тег для додавання малюнків на сторінку.',
+        similarTopics: [],
+        like: true,
+        category: 'html',
+        descriptionEng: 'Supports image formats gif, jpg, png and more. Attribute  - alt - alternative text, for example, when the image is not loaded.',
+        descriptionUa: 'Підтримує формати зображень gif, jpeg, png та інші. Атрібут - alt - альтернативний текст, наприклад коли малюнок не загрузився.',
+        linkToDocumentationEng: [
+            'https://www.w3schools.com/tags/tag_a.asp'
+        ],
+        linkToDocumentationUA: [
+            'https://css.in.ua/html/tag/a'
+        ],
+        author: 'Anton Kuts',
+        dateIntroductionOrUpdate: '04.02.2020',
+        code:'<img src="some link" alt="some text"/>',
+        display: true,
+        mandatoryAttributes: 'href',
+        lesson: 2
+    },
+    {
+        id: 12,
+        title: 'a',
+        intro: 'Creates a hyperlink to an external address or place on this page.',
+        introUa: 'Cтворює гіперпосилання на зовнішню адресу, чи на місце на цій сторінці.',
+        similarTopics: [],
+        like: true,
+        category: 'html',
+        descriptionEng: 'It may link to other web pages, files, e-mail addresses or any other URL and tags located on this page.',
+        descriptionUa: 'Може посилатись на  інші веб-сторінки, файли, адреси електронної пошти чи будь-яку іншу URL-адресу, та теги, що розташовані на цій сторінці.',
+        linkToDocumentationEng: [
+            'https://www.w3schools.com/tags/tag_a.asp'
+        ],
+        linkToDocumentationUA: [
+            'https://css.in.ua/html/tag/a'
+        ],
+        author: 'Anton Kuts',
+        dateIntroductionOrUpdate: '04.02.2020',
+        code:'<a href="some URL"> some text </a>',
+        display: true,
+        mandatoryAttributes: 'href',
+        lesson: 2
+    },
+    {
+        id: 13,
+        title: 'span',
+        intro: 'Tag to highlight text among other text.',
+        introUa: 'Тег для виділення тексту з поміж іншого тексту.',
+        similarTopics: ['p'],
+        like: true,
+        category: 'html',
+        descriptionEng: 'Inline tag that is used in the middle of other tags to highlight text. You need to apply css styles to change the highlighted text.',
+        descriptionUa: 'Рядковий (inline) тег, який застосовується в середини інших тегів для виділеня тексту. Для зміни виділеного тексту необхідно застосувати стилі css.',
+        linkToDocumentationEng: [
+            'https://developer.mozilla.org/uk/docs/Web/HTML/Element/span'
+        ],
+        linkToDocumentationUA: [
+            'https://css.in.ua/html/tag/span'
+        ],
+        author: 'Anton Kuts',
+        dateIntroductionOrUpdate: '04.02.2020',
+        code:'<p> some text <span> highlight text </span> some text </p>',
+        display: true,
+        mandatoryAttributes: 'href',
+        lesson: 2
     }
 
 ];

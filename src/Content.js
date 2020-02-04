@@ -1,8 +1,8 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import './Content.css';
-import Tooltip from './Tooltip';
-import Link from './Link';
+import Tooltip from './helpers/Tooltip';
+import Link from './helpers/Link';
 
 const Content = (props) => {
 
@@ -33,7 +33,7 @@ const Content = (props) => {
             { item.title
               ?
               <>
-                <Link name={item.title} className="a-for-anchor-in" key={item + index} href={`#${item}`} text={<h3>{item.title}</h3>} />
+                <Link name={item.title} className="a-for-anchor-in" textForKey={item + index} href={`#${item}`} text={<h3>{item.title}</h3>} />
                 <p className= {`like ${item.like ? 'yesLike' : 'noLike'}`} onClick={() => setLike(item)}>
                   like
                 </p>

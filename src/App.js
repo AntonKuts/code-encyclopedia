@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import './App.css';
 import Content from './Content';
-import Header from './Header';
+import Header from './headerAndMenus/Header';
+import AllTitles from './headerAndMenus/AllTitles';
+
 import { getStartInfo } from './data';
 
 const App = () => {
   const [language, setLanguage] = useState('ua');
   const [info, setInfo] = useState(getStartInfo());
   const [tost, setStateTost] = useState('');
-  const [lessons, setLessons] = useState([ ...new Set(info.map(word=> word.lesson))]);
   const [selectLesson, setSelectLesson] = useState(0);
 
   const setTost = (text) => {
@@ -16,14 +17,12 @@ const App = () => {
     setTimeout(()=>setStateTost(''), 3000);
   }
 
-  const onlyTitles = info.map(word=> word.tatle); //toDo
-
   return (
     <div className="App">
       <Header
+        info={info}
         tost={tost}
         setInfo={setInfo}
-        lessons={lessons}
         setTost={setTost}
         language={language}
         setLanguage={setLanguage}
@@ -36,6 +35,11 @@ const App = () => {
         setTost={setTost}
         setInfo={setInfo}
         language={language}
+      />
+      <AllTitles
+        info={info}
+        language={language}
+        setTost={setTost}
       />
     </div>
   );

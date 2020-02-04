@@ -1,13 +1,11 @@
 import React from 'react';
 import './Header.css';
-import Link from './Link';
-import { getStartInfo } from './data';
+import { getStartInfo } from '../data';
 
 const Header = (props) => {
   const {
     tost,
     setTost,
-    lessons,
     setInfo,
     language,
     setLanguage,
@@ -15,6 +13,8 @@ const Header = (props) => {
     setStateTost,
     setSelectLesson
   } = props;
+
+  const lessons = [...new Set(getStartInfo().map(word=> word.lesson))];
 
   const changeLanguage = () => {
     const newLanguage = language === 'ua' ? 'en' : 'ua';
@@ -42,7 +42,7 @@ const Header = (props) => {
       <div className={`right-panel change-lessons ${selectLesson === 0 ? '' : 'select-lesson-box'}`}>
         <p>lessons:</p>
         {lessons.map((number, item) =>
-          <button key={item} className={selectLesson === number ? 'select-lesson' : ''} onClick={() => changeLesson(number)}>
+          <button key={item + number} className={selectLesson === number ? 'select-lesson' : ''} onClick={() => changeLesson(number)}>
             {number ? number : 'none'}
           </button>
         )}
